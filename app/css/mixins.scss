@@ -1,0 +1,18 @@
+@mixin task1 {
+    width: 270px;
+    padding: 0;
+    .cell {
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      border: 1px solid white;
+      display: inline-block;
+      text-align: center;
+    }
+    .cell:nth-child(2n){
+      background: yellow;
+    }
+    .yellow {
+      background: yellow;
+    }
+  }
