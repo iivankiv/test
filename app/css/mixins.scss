@@ -16,3 +16,24 @@
       background: yellow;
     }
   }
+
+@mixin game1 {
+  p {
+    font-size: 0.8em;
+  }
+
+  div {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  }
+
+  #rightSide {
+    left: 500px;
+    border-left: 3px solid gray;
+  }
+
+  img {
+    position: absolute;
+  }
+}

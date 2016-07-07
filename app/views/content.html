@@ -7,23 +7,23 @@
         <div class="container-fluid">
             <ul class="nav nav nav-pills">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tasks <span class="caret"></span></a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tasks <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a ui-sref="app.task1">Tasks #1</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Tasks #2</a></li>
+                        <li><a href="">Tasks #2</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Tasks #3</a></li>
+                        <li><a href="">Tasks #3</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games<span class="caret"></span></a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Games #1</a></li>
+                        <li><a ui-sref="app.game1">Games #1</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Games #2</a></li>
+                        <li><a href="">Games #2</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Games #3</a></li>
+                        <li><a href="">Games #3</a></li>
                     </ul>
                 </li>
             </ul>
@@ -31,13 +31,7 @@
     </nav>
 </div>
 <div class="row">
-    <div class="col-md-5">
-        <div class="description"></div>
-    </div>
-    <div class="col-md-7">
-        <div class="content">
-            <h1>RESULT:</h1>
-            <div ui-view="tasks"></div>
-        </div>
+    <div class="content">
+        <div ui-view="tasks"></div>
     </div>
 </div>

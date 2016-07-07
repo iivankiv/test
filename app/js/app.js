@@ -30,6 +30,15 @@ angular.module('myApp',['ui.router'])
                 }
             })
 
+            //route for the content game#1
+            .state('app.game1', {
+                url: 'game1',
+                views: {
+                    'tasks': {
+                        templateUrl: 'views/game1.html'
+                    }
+                }
+            })
             //route for the
         ;
         $urlRouterProvider.otherwise('/');

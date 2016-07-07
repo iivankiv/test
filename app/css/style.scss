@@ -9,9 +9,15 @@ button {
 }
 .content {
   width: 100%;
-  height: auto;
-  background: $content-bg-color;
-  margin: 0 auto;
+  height: 500px;
+  background: lightgray;
+  border-radius: 5px;
+}
+.description {
+  width: 100%;
+  height: 500px;
+  background: lightgray;
+  border-radius: 5px;
 }
 footer {
   width: 100%;
@@ -22,4 +28,7 @@ footer {
 }
 #container-for-task1 {
   @include task1;
+}
+#container-for-game1 {
+  @include game1;
 }

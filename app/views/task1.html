@@ -1,1 +1,50 @@
-<div id="container-for-task1">fasdfasdfasdfsadf</div>
+<div class="col-md-4">
+    <div class="description">
+        <h4>Task description:</h4>
+        <div class="describe">
+            <p>Написати сценарій на JS який згенерує і виведе в браузер таблицю Піфагора,
+                приблизний вигляд якої зображений на рисунку 2.1</p>
+            <div class="img_task1">
+                <figure>
+                    <img src="images/task1.png" alt="Piphagor's table" width="250" height="250">
+                    <figcaption>Рисунок 2.1 - Вигляду таблиці Піфагора</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h5>Особливості:</h5>
+            <ol>
+                <li>Існує головний контейнер  в який будуть додані відповідні контейнериз числами.</li>
+                <li>Головний контейнер робиться статично засобами HTML і стилізується засобами CSS. Для цілого документа потрібно використати моноширний шрифт (літери однакової ширини) для прикладу Courier.</li>
+                <li>Контейнери з числами генеруються засобами JavaScript з використанням DOM-методів: createElement(), setAttribute(), appendChild(), getElementById, об’єкту document.</li>
+                <li>За бажанням можна стилізувати контейнери з числами у відповідності до числа (парне/непарне, або інші особливості).</li>
+            </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="result">
+        <h4>RESULT:</h4>
+        <div id="container-for-task1"></div>
+    </div>
+</div>
+<script>
+    function buildTable () {
+        var container = document.getElementById("container-for-task1");
+        var rows, colls, t;
+
+        for (rows = 1; rows <= 9; rows++) {
+            for (colls = 1; colls <= 9; colls++) {
+                var div = document.createElement("div");
+                div.setAttribute("class", "cell");
+                t = rows*colls;
+                div.innerHTML = t;
+                container.appendChild(div);
+                if (rows % 2 == 0) {
+                    div.className += " yellow";
+                }
+            }
+        }
+    }
+    buildTable();
+</script>
