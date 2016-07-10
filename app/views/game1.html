@@ -4,7 +4,10 @@
         <div class="describe">
             <div>
                 <h5>How to play:</h5>
-                <p>You have to click on the extra smiling face on the left side!</p>
+                <p>You have to click on the extra smiling face on the left side!
+                <b>If you click on any ather area in the page except extra smile on
+                    the left side you'll lose the game!</b>
+                </p>
             </div>
         </div>
     </div>
@@ -12,63 +15,16 @@
 <div class="col-md-8">
     <div class="result">
         <h4 class="reslt">RESULT:</h4>
-        <button type="button" class="res">RESET</button>
+        <button type="button" class="res" id="restartGame1">RESTART</button>
+        <button type="button" id='startGame1' class="res">START</button>
         <div id="container-for-game1">
-            <div id="theBody">
+            <div class="col-md-6">
                 <div id="leftSide"></div>
+            </div>
+            <div class="col-md-6">
                 <div id="rightSide"></div>
             </div>
         </div>
     </div>
 </div>
-<script>
-    function smileGame() {
-        var numberOfFaces = 5;
-        var counter = 0;
-
-        function generateFaces() {
-            var theLeftSide = document.getElementById("leftSide");
-            console.log(theLeftSide);
-            var theRightSide = document.getElementById("rightSide");
-            var theBody = document.querySelector("#theBody");
-
-            for (var i = 0; i < numberOfFaces; i++) {
-                var theImage = document.createElement("img");
-                theImage.src = "images/smile.png";
-                var xPosition = Math.floor(Math.random() * 200);
-                var yPosition = Math.floor(Math.random() * 200);
-                theImage.style.top = xPosition + "px";
-                theImage.style.left = yPosition + "px";
-                theLeftSide.appendChild(theImage);
-            }
-
-            var leftSideImages = theLeftSide.cloneNode(true);
-            leftSideImages.removeChild(leftSideImages.lastChild);
-            theRightSide.appendChild(leftSideImages);
-
-            theLeftSide.lastChild.onclick = function nextLevel(event) {
-                event.stopPropagation();
-                deleteNodes();
-                numberOfFaces += 5;
-                counter += 100;
-                generateFaces();
-            };
-
-            theBody.onclick = function gameOver() {
-                alert("Game Over! Your score:  " + counter);
-                theBody.onclick = null;
-                theLeftSide.lastChild.onclick = null;
-            };
-
-            function deleteNodes() {
-                while (theLeftSide.firstChild)
-                    theLeftSide.removeChild(theLeftSide.firstChild);
-
-                while (theRightSide.firstChild)
-                    theRightSide.removeChild(theRightSide.firstChild);
-            }
-        }
-        generateFaces();
-    }
-    smileGame();
-</script>
+<script src="js/game1.js"></script>

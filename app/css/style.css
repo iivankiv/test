@@ -18,6 +18,11 @@
   margin-right: 10px;
   padding: 5px;
 }
+.result button#start_game1 {
+  float: right;
+  margin-right: 10px;
+  padding: 5px;
+}
 .description {
   width: 100%;
   height: auto;
@@ -56,7 +61,7 @@ footer {
   margin-top: 20px; }
 
 #container-for-game1 {
-  width: 650px;
+  min-width: 650px;
   margin: 0 auto;
   padding: 10px;
   position: relative;
@@ -66,14 +71,16 @@ footer {
   font-size: 0.8em;
 }
 
-#container-for-game1 div {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-}
+/*#container-for-game1 div {*/
+  /*position: absolute;*/
+  /*width: 300px;*/
+  /*height: 300px;*/
+/*}*/
 
-#container-for-game1 #rightSide {
-  left: 300px;
+#rightSide, #leftside {
+  width: 325px;
+  height: 325px;
+  padding: 10px;
   border-left: 3px solid gray;
 }
 
